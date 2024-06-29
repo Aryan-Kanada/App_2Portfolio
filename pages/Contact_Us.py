@@ -9,10 +9,11 @@ with st.form(key="contact_forms"):
     user_message = st.text_area("Your Message")
     submit_button = st.form_submit_button("Submit")
 
-    message = f"""Subject:New email form{user_name}
+    message = f"""Subject:New email form {user_name}
     
-    Body: {user_message}
-    Reply back on {user_email}
+    \n\n{user_message}
+    
+    From: {user_email}
 """
 
 if submit_button:
